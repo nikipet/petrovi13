@@ -12,3 +12,5 @@ function getCurrentYear() {
 
 // Set the content of the element with the ID "current-year" to the current year
 document.getElementById("copyright").innerHTML = "Copyright&copy;   Петрови-13&reg; " + getCurrentYear();
+
+

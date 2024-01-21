@@ -19,7 +19,9 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css" />
   </head>
   <body>
     <!-- Responsive navbar-->
@@ -47,28 +49,56 @@
         </div>
       </div>
     </nav>
-    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
-      <h1>За нас</h1>
-      <p>
-        Нашата дейност започва през 1998 година. През първите две години се фокусираме върху производството на лешникови плодове от наети градини. През 2000
-        година стартираме производство на лешников посадъчен материал. Бяхме доставчици на посадъчен материал по програма „Сапард“, под контрола на ИАСАС.
-      </p>
-
-      <p>
-        От 2005 година сме лицензиран производител на посадъчен материал като ЗП „Владимир Стефанов Петров“. През 2014 година получаваме лиценз и за „Петрови
-        13-Владимир Стефанов Петров“ ООД. Производството е насочено към биологичен посадъчен материал от лешници и орехи.
-      </p>
-
-      <p>
-        На клиентите си предоставяме и съвети от създаване на овошни градини от лешник и орех до всъпване в плододаването. В последствие съдействаме и за
-        намиране на по-добри пазари за реализацията на продукцията от лешник и орех-плод.
-      </p>
-
-      <p>
-        В настоящия момент предлагаме четири сорта вкоренени лешникови фиданки (Ран Трапезундски, Императорски Трапезундски, Римски и Тонда Джентиле) на възраст
-        от 1 до 5 години, в зависимост от периода на отглеждане, и три сорта облагороден орех (Шейново, Дряновски и Сливенски).
-      </p>
+    <div class="container h-100 justify-content-center align-items-center mt-4">
+      <div class="row">
+        <p class="col text-center">
+          Благодарим Ви за проявения интерес към "Петрови 13"! Не се колебайте да се свържете с нас на посочения телефонен номер или да ни изпратите имейл.
+        </p>
+      </div>
+      <div class="row">
+        <p class="col text-center">
+          Ако имате въпроси, коментари или се нуждаете от допълнителна информация, молим да използвате формата по-долу, за да ни изпратите съобщение.
+        </p>
+        </div>
+        <div class="row">
+        <p class="col text-center">Ние с удоволствие ще отговорим на Вашите запитвания възможно най-скоро.
+        </p>
+      </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-6 mx-auto">
+          <form id="my-form" action="https://formspree.io/f/xdovjdzb" method="POST">
+            <input type="hidden" name="_next" value="thank-you.html">
+            <div class="form-group text-center">
+              <div class="row">
+                <div class="col">
+                  <label for="email">Вашият имейл:</label>
+                  <input type="email" class="form-control" id="email" name="email" required="true" placeholder="Вашият email" />
+                </div>
+                <div class="col">
+                  <label for="Name">Име И :</label>
+                  <input type="text" class="form-control" id="name" name="Name" placeholder="Име и Фамилия (По избор)" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <label for="Phone">Телефонен номер:</label>
+              <input type="tel" id="phone" name="Phone" required class="form-control" data-intl-tel-input-id="0" autocomplete="off" />
+              <div id="invalidPhone" class="invalid-feedback">Невалиден номер</div>
+            </div>
+            <div class="form-group text-center">
+              <label for="message">Съобщение:</label>
+              <textarea class="form-control" id="message" name="message" rows="3" required placeholder="Вашето съобщение"></textarea>
+            </div>
+            <div class="text-center">
+              <button id="my-form-button" class="btn btn-primary">Изпрати</button>
+              <p id="my-form-status"></p>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+
     <!-- Footer-->
     <footer class="py-5 bg-dark fixed-bottom">
       <div class="container px-4 px-lg-5">
@@ -92,5 +122,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script src="js/contact-us.js"></script>      
+    </script>
   </body>
 </html>
